@@ -35,7 +35,7 @@ const Hero = () => {
       stagger: 0.1,
       x: 0,
       opacity: 1,
-      delay: 2,
+      delay: 1.2,
     });
   }, [])
 
@@ -51,18 +51,18 @@ const Hero = () => {
         </h1>
         <p
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
-          className="hero-para mx-auto max-w-[22.5rem] translate-y-2.5 text-sm opacity-0 lg:text-[1.25rem]"
+          className="hero-para mx-auto max-w-129 translate-y-2.5 text-sm opacity-0 lg:text-[1.25rem]"
         >
           Experience the prestige of a professionally detailed car, radiating elegance and refinement at every turn.
         </p>
         <Link
           href="/contact"
-          className="inline-block py-2 px-6 rounded hover:underline underline-offset-2 hero-para opacity-0 translate-y-2.5"
+          className="inline-block py-2 px-6 rounded hover:underline underline-offset-2 hero-para opacity-0 translate-y-2.5 border p-2"
         >
           <span>Get Quote</span> <ArrowUpRight className="ml-2 inline" />
         </Link>
       </div>
-      <div>
+      <div className="mt-20">
         <Image
           className="object-cover hero-image opacity-0"
           src={heroImg}

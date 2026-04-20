@@ -1,9 +1,11 @@
+"use client";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import car4 from "@/assets/img/car-img-4.jpg";
 import car3 from "@/assets/img/car-img-3.webp";
 import car2 from "@/assets/img/car-img-2.webp";
+import {motion} from "framer-motion";
 
 const Services = () => {
   const serviceList = [
@@ -25,25 +27,38 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-[3.75rem]">
+    <div className="py-15">
       <h2 className="text-[20px] text-[#999999] font-medium border-b pb-10 border-[#999999] mb-12">
         Luxury car detailing
       </h2>
-      <div className="grid lg:grid-cols-2 items-center mb-20">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+        className="grid lg:grid-cols-2 items-center mb-20"
+      >
         <h2 className="text-[48px] font-medium">Love in Every Detail</h2>
         <p className="text-[20px] text-[#999999]">
           Immerse yourself in luxury with our bespoke detailing packages
           tailored to your car's unique needs
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col md:flex-row items-center md:gap-8 gap-4">
-        {serviceList.map((service) => (
-          <div className=" flex flex-col gap-8" key={service.title}>
+        {serviceList.map((service, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 * index }}
+            className=" flex flex-col gap-8"
+            key={service.title}
+          >
             <div>
               <Image
                 width={352}
                 height={352}
-                className="mb-8 aspect-square h-[22rem] w-[22rem] object-cover"
+                className="mb-8 aspect-square h-88 w-88 object-cover"
                 src={service.img}
                 alt="luxury-car-service"
               />
@@ -53,7 +68,7 @@ const Services = () => {
             <Link className="" href={"#"}>
               <span>Learn more</span> <ArrowRight className="ml-2 inline" />
             </Link>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

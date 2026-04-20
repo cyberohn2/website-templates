@@ -26,7 +26,7 @@ const Header = () => {
 
 
   return (
-    <header className={`w-full -translate-y-10 opacity-0 py-4 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--foreground)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg border-b"}`}>
+    <header className={`w-full -translate-y-10 opacity-0 py-4 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--black)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg border-b"}`}>
       <h1 className="md:text-[20px] font-medium">LexureDetails</h1>
       <nav className="hidden md:block">
         <ul className="flex items-center gap-8  ">

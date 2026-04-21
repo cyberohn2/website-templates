@@ -27,15 +27,18 @@ const Header = () => {
         <span className="text-pry-blue text-[1.4rem]!">Car</span> Dealership
       </h1>
       <nav className="hidden md:flex items-center justify-between gap-4 lg:gap-16 container mx-auto">
-        <ul className="flex items-center flex-1 justify-between">
+        <ul className="flex items-center flex-1 lg:gap-13.5 justify-between lg:justify-normal">
           <li>About</li>
           <li>Services</li>
           <li>Brands</li>
         </ul>
         <h1 className=" uppercase text-pry-red text-[1rem]! lg:text-[1.2rem]!">
-          <span className="text-[1.4rem]! lg:text-[1.85rem]! text-pry-blue">Car</span> Dealership
+          <span className="text-[1.4rem]! lg:text-[1.85rem]! text-pry-blue">
+            Car
+          </span>{" "}
+          Dealership
         </h1>
-        <ul className="flex items-center flex-1 justify-between">
+        <ul className="flex items-center flex-1 lg:gap-13.5 justify-between lg:justify-normal">
           <li>Explore</li>
           <li>Blogs</li>
           <li>Feedbacks</li>

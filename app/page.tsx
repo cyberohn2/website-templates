@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      <main>
-        {/* <Hero /> */}
+      <main className="container mx-auto">
+        <Hero />
         {/* <Brands /> */}
         {/* <Explore /> */}
         {/* <Services /> */}

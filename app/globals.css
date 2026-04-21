@@ -3,24 +3,83 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --pry-blue: #100e34;
+  --pry-red: #a2001d;
+  --pry-bg: #f8f8f8;
+  --gray-100: #eaebf0;
+  --gray-200: #D3D5E0;
+  --gray-300: #AFB1BA;
+  --gray-400: #666872;
+
+  --body-1: 1.5rem;
+  --body-2: 1.25rem;
+  --body-3: 1.125rem;
+  --body-4: 1rem;
+  --body-5: .875rem;
+  --body-6: .75rem;
+
+  --btn: .9375rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-pry-blue: var(--pry-blue);
+  --color-pry-red: var(--pry-red);
+  --color-pry-bg: var(--pry-bg);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --body-1: var(--body-1);
+  --body-2: var(--body-2);
+  --body-3: var(--body-3);
+  --body-4: var(--body-4);
+  --body-5: var(--body-5);
+  --body-6: var(--body-6);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+h2{
+  font-size: 3rem;
+  font-weight: bold;
+}
+h3{
+  font-size: 2rem;
+  font-weight: bold;
+}
+h4{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+h5{
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+h6{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button {
+  font-size: var(--btn);
+  font-weight: semi-bold;
 }

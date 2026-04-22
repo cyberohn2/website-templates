@@ -12,10 +12,12 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      <main className="container mx-auto">
-        <Hero />
-        <Brands />
-        {/* <Explore /> */}
+      <main>
+        <div className="container mx-auto">
+          <Hero />
+          <Brands />
+        </div>
+        <Explore />
         {/* <Services /> */}
         {/* <Cta /> */}
         {/* <Feedback /> */}

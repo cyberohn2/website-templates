@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 rounded-full px-5 py-3 backdrop-blur-xl flex ${
+      className={`fixed w-full top-4 z-50 transition-all duration-300 rounded-full px-5 py-3 backdrop-blur-xl flex ${
         isScrolled
           ? "border border-white/38 bg-white/44 shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
           : ""
@@ -38,7 +38,7 @@ const Header = () => {
           </span>{" "}
           Dealership
         </h1>
-        <ul className="flex items-center flex-1 lg:gap-13.5 justify-between lg:justify-normal">
+        <ul className="flex items-center flex-1 lg:gap-13.5 justify-between lg:justify-end">
           <li>Explore</li>
           <li>Blogs</li>
           <li>Feedbacks</li>

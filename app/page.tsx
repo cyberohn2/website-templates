@@ -13,17 +13,21 @@ export default function Home() {
     <div className="">
       <Header />
       <main>
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <Hero />
           <Brands />
         </div>
         <Explore />
-        {/* <Services /> */}
-        {/* <Cta /> */}
-        {/* <Feedback /> */}
-        {/* <Blog /> */}
+        <div className="container mx-auto px-4">
+          <Services />
+        </div>
+        <Cta />
+        <div className="container mx-auto px-4">
+          <Feedback />
+          <Blog />
+        </div>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -15,8 +15,10 @@ export const myCustomFont = localFont({
 });
 
 import "./globals.css";
+import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Luxury Car Website",
@@ -31,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myCustomFont.variable} ${myCustomFont.className} h-full antialiased`}
+      className={cn("h-full", "antialiased", myCustomFont.variable, myCustomFont.className, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col scroll-smooth">{children}</body>
     </html>
   );
 }

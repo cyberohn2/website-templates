@@ -40,12 +40,12 @@ const Hero = () => {
   }, [])
 
   return (
-    <div className="min-h-[80vh] md:min-h-[40vh] lg:min-h-screen relative overflow-hidden py-20 text-center">
+    <div style={{backgroundImage: "url('/img/Portfolio banner.jpg')"}} className="min-h-[80vh] md:min-h-[40vh] lg:min-h-screen relative overflow-hidden py-20 text-center grid md:grid-cols-2 bg-no-repeat bg-cover bg-center">
       <div className="space-y-6">
         <h1
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
           id="hero-text"
-          className="text-[2rem] md:text-[4rem] lg:text-[6rem] font-medium"
+          className="text-[2rem] md:text-[4rem] lg:text-[5rem] font-medium"
         >
           Luxury car detailing
         </h1>
@@ -62,14 +62,14 @@ const Hero = () => {
           <span>Get Quote</span> <ArrowUpRight className="ml-2 inline" />
         </Link>
       </div>
-      <div className="mt-20">
-        <Image
+      <div className="mt-20 w-350 h-135.5">
+        {/* <Image
           className="object-cover hero-image opacity-0"
           src={heroImg}
           width={1400}
           height={542}
           alt="luxurious car"
-        />
+        /> */}
       </div>
     </div>
   );

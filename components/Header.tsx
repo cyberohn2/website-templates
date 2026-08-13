@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useState } from 'react'
 import gsap from "gsap";
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Header = () => {
@@ -26,22 +28,27 @@ const Header = () => {
 
 
   return (
-    <header className={`w-full -translate-y-10 opacity-0 py-4 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--black)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg border-b"}`}>
-      <h1 className="md:text-[20px] font-medium">LexureDetails</h1>
+    <header
+      className={`w-full opacity-0 py-1 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--black)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg"}`}
+    >
+      <Image src="/img/logo.png" alt="Logo" width={100} height={50} />
       <nav className="hidden md:block">
         <ul className="flex items-center gap-8  ">
-          {["Services", "Pricing", "About", "Contact"].map((item) => (
+          {["About", "My works", "Contact"].map((item) => (
             <li
               key={item}
-              className="cursor-pointer hover:text-gray-600 transition-colors duration-300"
+              className="cursor-pointer text-white hover:text-gray-600 transition-colors duration-300"
             >
-              {item}
+              <Link href={`#${item.toLowerCase().replace(/\s/g, "")}`}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
-      <button className="hidden md:block px-4 py-2 border border-white text-white rounded hover:bg-white transition-colors duration-300">
-        Get a Quote
+      <button className="md:flex items-center gap-1 text-white hidden">
+        <span>Available For Work</span>
+        <span className=" animate-pulse w-2.5 h-2.5 bg-[#08178f] rounded-full"></span>
       </button>
       <button
         className="md:hidden text-white focus:outline-none z-50  cursor-pointer ml-auto"
@@ -71,17 +78,21 @@ const Header = () => {
         <nav className="container mx-auto px-4">
           <nav className="flex flex-col gap-4 items-center">
             <ul className="flex flex-col items-center gap-8  ">
-              {["Services", "Pricing", "About", "Contact"].map((item) => (
+              {["About", "My works", "Contact"].map((item) => (
                 <li
                   key={item}
-                  className="cursor-pointer hover:text-gray-600 transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="cursor-pointer text-white hover:text-gray-600 transition-colors duration-300"
                 >
-                  {item}
+                  <Link href={`#${item.toLowerCase().replace(/\s/g, "")}`}>
+                    {item}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <button className="px-4 py-2 border border-white text-white rounded hover:bg-white transition-colors duration-300">
-              Get a Quote
+            <button className="">
+              <span>Available For Work</span>
+              <span className="w-12.5 h-12.5 bg-[#08178f] rounded-full ml-2"></span>
             </button>
           </nav>
         </nav>

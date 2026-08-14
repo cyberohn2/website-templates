@@ -30,7 +30,7 @@ const Hero = () => {
           // markers: true,
         },
         position: "absolute",
-        top: isMobile ? "110%" : "160%",
+        top: isMobile ? "105%" : "160%",
         left: isMobile ? 0 : 50,
         scale: !isMobile ? 0.9 : 1,
         duration: 5,

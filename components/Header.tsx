@@ -29,9 +29,9 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full opacity-0 py-1 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--black)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg"}`}
+      className={`w-full opacity-0 px-4 md:px-8 flex items-center justify-between fixed top-0 z-50 transition-all duration-300 ${isScrolled && "bg-linear-to-r from-(--black)/80 via-black/70 to-(--foreground)/80 backdrop-blur-md shadow-lg border-b"}`}
     >
-      <Image src="/img/logo.png" alt="Logo" width={100} height={50} />
+      <Image src="/img/logo.png" alt="Logo" width={80} height={30} />
       <nav className="hidden md:block">
         <ul className="flex items-center gap-8  ">
           {["About", "My works", "Contact"].map((item) => (

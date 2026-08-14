@@ -14,6 +14,7 @@ const Categories = () => {
       {
         title: "Brand Identity Design",
         description: "Distinct visual identities that make brands memorable.",
+        url: "https://drive.google.com/drive/folders/1jzGpY2StDNFiY6Y8KamX1PX3P7SEaI5P?usp=sharing",
         images: [
           "/img/brand-1.jpg",
           "/img/brand-2.jpg",
@@ -23,7 +24,9 @@ const Categories = () => {
       },
       {
         title: "Flyer Design",
-        description: "Eye-catching flyers designed to grab attention and inform.",
+        description:
+          "Eye-catching flyers designed to grab attention and inform.",
+        url: "https://drive.google.com/drive/folders/16SIyVnleg0z4SSS-1LwB3PB3Omhhy9ay?usp=sharing",
         images: [
           "/img/flyer-1.jpg",
           "/img/flyer-2.jpg",
@@ -34,6 +37,7 @@ const Categories = () => {
       {
         title: "Poster Design",
         description: "Bold, creative posters that communicate at a glance.",
+        url: "https://drive.google.com/drive/folders/10GWusNsn4FwzfccjiaqzjfVCE9vGlJxp?usp=sharing",
         images: [
           "/img/poster-1.jpg",
           "/img/poster-2.jpg",
@@ -49,8 +53,8 @@ const Categories = () => {
         <h2 className="lg:text-5xl md:text-4xl text-2xl lg:leading-18 md:leading-10 font-bold">
           Portfolio
         </h2>
-        <Carousel className="mt-8">
-          <CarouselContent className="isolate overflow-x-visible!">
+        <Carousel className="mt-8 overflow-visible!">
+          <CarouselContent className="isolate overflow-x-visible! gap-2">
             {sampleCategories.map((category, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -60,12 +64,13 @@ const Categories = () => {
                 key={index}
               >
                 <CarouselItem
-                  className="bg-transparent md:basis-1/2 lg:basis-1/3 py-0 pl-0! min-w-[320px]"
+                  className="bg-transparent md:basis-1/2 lg:basis-1/3 py-0 pl-0! min-w-[320px] overflow-x-visible "
                 >
                   <CategoryCard
                     title={category.title}
                     description={category.description}
                     images={category.images}
+                    url={category.url}
                   />
                 </CarouselItem>
               </motion.div>

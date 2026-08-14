@@ -12,36 +12,34 @@ import { CategoryCard } from "./category-card";
 const Categories = () => {
     const sampleCategories = [
       {
-        title: "Female Native",
-        category: "FEMALE_NATIVE",
-        description:
-          "Explore our latest collection of women's clothing.",
-        imageUrl: "/img/avatar.jpg",
+        title: "Brand Identity Design",
+        description: "Distinct visual identities that make brands memorable.",
+        images: [
+          "/img/brand-1.jpg",
+          "/img/brand-2.jpg",
+          "/img/brand-3.jpg",
+          "/img/brand-4.png",
+        ],
       },
       {
-        title: "Male Native",
-        category: "MALE_NATIVE",
-        description: "Discover the newest trends in men's fashion.",
-        imageUrl: "/img/avatar.jpg",
+        title: "Flyer Design",
+        description: "Eye-catching flyers designed to grab attention and inform.",
+        images: [
+          "/img/flyer-1.jpg",
+          "/img/flyer-2.jpg",
+          "/img/flyer-3.jpg",
+          "/img/flyer-4.jpg",
+        ],
       },
       {
-        title: "Corporate Male",
-        category: "CORPORATE_MALE",
-        description: "Find the perfect corporate attire for men.",
-        imageUrl: "/img/avatar.jpg",
-      },
-      {
-        title: "Corporate Female",
-        category: "CORPORATE_FEMALE",
-        description: "Find the perfect corporate attire for women.",
-        imageUrl: "/img/avatar.jpg",
-      },
-      {
-        title: "Street Wears",
-        category: "STREET_WEAR",
-        description:
-          "Explore our latest collection of streetwear clothing and accessories.",
-        imageUrl: "/img/avatar.jpg",
+        title: "Poster Design",
+        description: "Bold, creative posters that communicate at a glance.",
+        images: [
+          "/img/poster-1.jpg",
+          "/img/poster-2.jpg",
+          "/img/poster-3.jpg",
+          "/img/poster-4.jpg",
+        ],
       },
     ];
 
@@ -49,7 +47,7 @@ const Categories = () => {
     <section id="myworks" className="py-14 md:pt-24 border-t">
       <div className="container mx-auto px-4">
         <h2 className="lg:text-5xl md:text-4xl text-2xl lg:leading-18 md:leading-10 font-bold">
-          Categories
+          Portfolio
         </h2>
         <Carousel className="mt-8">
           <CarouselContent className="isolate overflow-x-visible!">
@@ -67,7 +65,7 @@ const Categories = () => {
                   <CategoryCard
                     title={category.title}
                     description={category.description}
-                    imageUrl={category.imageUrl}
+                    images={category.images}
                   />
                 </CarouselItem>
               </motion.div>

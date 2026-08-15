@@ -1,3 +1,4 @@
+import { MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,9 +13,18 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex items-center gap-4 md:justify-end">
-          <Link className="block" href="#"><img src="/img/icon-instagram.svg" alt="" /></Link>
-          <Link className="block" href={"#"}><img src="/img/icon-facebook.svg" alt="" /></Link>
-          <Link className="block" href={"#"}><img src="/img/icon-twitter.svg" alt="" /></Link>
+          <Link className="block" href="https://instagram.com/graphical_ralph">
+            <img src="/img/icon-instagram.svg" alt="" />
+          </Link>
+          <Link className="block" href={"https://pin.it/65gxLNKAw"}>
+            <img src="/img/icon-pinterest.svg" alt="" />
+          </Link>
+          <Link className="block" href={"https://x.com/graphicalralph"}>
+            <img src="/img/icon-twitter.svg" alt="" />
+          </Link>
+          <Link className="block" href={"mailto:graphicalralph@gmail.com"}>
+            <MailIcon className="w-6 h-6" />
+          </Link>
         </div>
       </div>
     </footer>
